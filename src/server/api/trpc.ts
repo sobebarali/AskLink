@@ -9,6 +9,7 @@
 import { initTRPC } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
+import { v4 as uuidv4 } from "uuid";
 
 /**
  * 1. CONTEXT
@@ -25,6 +26,7 @@ import { ZodError } from "zod";
 export const createTRPCContext = async (opts: { headers: Headers }) => {
   return {
     ...opts,
+    requestId: uuidv4(),
   };
 };
 
