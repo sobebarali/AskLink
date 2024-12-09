@@ -9,6 +9,8 @@ export const env = createEnv({
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
     OPENAI_API_KEY: z.string(),
+    LANGCHAIN_API_KEY: z.string(),
+    LANGCHAIN_TRACING_V2: z.boolean(),
   },
 
   /**
@@ -27,6 +29,8 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    LANGCHAIN_API_KEY: process.env.LANGCHAIN_API_KEY,
+    LANGCHAIN_TRACING_V2: process.env.LANGCHAIN_TRACING_V2,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
