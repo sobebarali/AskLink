@@ -10,7 +10,7 @@ export const env = createEnv({
     NODE_ENV: z.enum(["development", "test", "production"]),
     OPENAI_API_KEY: z.string(),
     LANGCHAIN_API_KEY: z.string(),
-    LANGCHAIN_TRACING_V2: z.boolean(),
+    LANGCHAIN_TRACING_V2: z.string(),
   },
 
   /**
